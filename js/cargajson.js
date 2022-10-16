@@ -39,10 +39,10 @@ function updateContent(valor, objJson){
             espana(objJson);
             break;
         case "3":
-            jsonFile = "argentina.json";
+            argentina(objJson);
             break;
         case "4":
-            jsonFile = "mexico.json";
+            mexico(objJson);
             break;
         default:
             console.log("Nada");
@@ -62,6 +62,22 @@ function espana(objJson){
     var id = 1;
     for (i in objJson){
         document.getElementById(id.toString()).value = objJson.i;
+        id++;
+    }
+}
+
+function argentina(objJson){
+    var id = 1;
+    for (i in objJson.participantes){
+        document.getElementById(id.toString()).value = objJson.participantes.i;
+        id++;
+    }
+}
+
+function mexico(objJson){
+    var id = 1;
+    for (i in objJson.participantes){
+        document.getElementById(id.toString()).value = objJson.participantes[i].i;
         id++;
     }
 }
