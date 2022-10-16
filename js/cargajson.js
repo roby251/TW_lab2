@@ -3,16 +3,16 @@ function main(){
 
     switch (value) {
         case "1":
-            jsonFile = "chile.json";
+            jsonFile = "json/chile.json";
             break;
         case "2":
-            jsonFile = "espana.json";
+            jsonFile = "json/espana.json";
             break;
         case "3":
-            jsonFile = "argentina.json";
+            jsonFile = "json/argentina.json";
             break;
         case "4":
-            jsonFile = "mexico.json";
+            jsonFile = "json/mexico.json";
             break;
         default:
             console.log("Nada");
@@ -51,6 +51,10 @@ function updateContent(valor, objJson){
 }
 
 function chile(objJson){
-    
+    var id = 0;
+    for (i in objJson.participantes){
+        document.getElementById(id.toString).value = i;
+        id++;
+    }
 }
 
