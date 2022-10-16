@@ -4,18 +4,18 @@ function main(){
     switch (value) {
         case "1":
             url = "chile.json";
-          break;
+            break;
         case "2":
             url = "espana.json";
-          break;
+            break;
         case "3":
             url = "argentina.json";
-          break;
+            break;
         case "4":
             url = "mexico.json";
-          break;
+            break;
         default:
-          console.log("Nada");
-          break;
+            console.log("Nada");
+            break;
       }
 }
