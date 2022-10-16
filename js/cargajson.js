@@ -23,14 +23,34 @@ function main(){
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
             var myObJson = JSON.parse(this.responseText);
-            updateContent();
+            updateContent(value, myObJson);
         }
     };
     xhttp.open("GET", jsonFile, true);
     xhttp.send();
 }
 
-function updateContent(){
+function updateContent(valor, objJson){
+    switch (valor) {
+        case "1":
+            chile(objJson);
+            break;
+        case "2":
+            jsonFile = "espana.json";
+            break;
+        case "3":
+            jsonFile = "argentina.json";
+            break;
+        case "4":
+            jsonFile = "mexico.json";
+            break;
+        default:
+            console.log("Nada");
+            break;
+    }
+}
 
+function chile(objJson){
+    
 }
 
