@@ -3,19 +3,34 @@ function main(){
 
     switch (value) {
         case "1":
-            url = "chile.json";
+            jsonFile = "chile.json";
             break;
         case "2":
-            url = "espana.json";
+            jsonFile = "espana.json";
             break;
         case "3":
-            url = "argentina.json";
+            jsonFile = "argentina.json";
             break;
         case "4":
-            url = "mexico.json";
+            jsonFile = "mexico.json";
             break;
         default:
             console.log("Nada");
             break;
-      }
+    }
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            var myObJson = JSON.parse(this.responseText);
+            updateContent();
+        }
+    };
+    xhttp.open("GET", jsonFile, true);
+    xhttp.send();
 }
+
+function updateContent(){
+
+}
+
