@@ -61,7 +61,7 @@ function chile(objJson){
 function espana(objJson){
     var id = 1;
     for (i in objJson){
-        document.getElementById(id.toString()).value = objJson.i;
+        document.getElementById(id.toString()).value = objJson;
         id++;
     }
 }
