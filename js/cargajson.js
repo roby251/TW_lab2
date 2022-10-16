@@ -51,9 +51,9 @@ function updateContent(valor, objJson){
 }
 
 function chile(objJson){
-    var id = 0;
+    var id = 1;
     for (i in objJson.participantes){
-        document.getElementById(id.toString).value = i;
+        document.getElementById(id.toString()).value = objJson.participantes[i];
         id++;
     }
 }
