@@ -36,7 +36,7 @@ function updateContent(valor, objJson){
             chile(objJson);
             break;
         case "2":
-            jsonFile = "espana.json";
+            espana(objJson);
             break;
         case "3":
             jsonFile = "argentina.json";
@@ -58,3 +58,10 @@ function chile(objJson){
     }
 }
 
+function espana(objJson){
+    var id = 1;
+    for (i in objJson){
+        document.getElementById(id.toString()).value = objJson.i;
+        id++;
+    }
+}
