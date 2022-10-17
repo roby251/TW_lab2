@@ -14,7 +14,7 @@
 <body>
     <div id="caca"></div>
     <label for="">Elige un pais:</label>
-    <select name=selectMC id="MC1" onchange="main()"> 
+    <select name=selectMC id="MC1" onchange="cargaJson('MC1')"> 
         <option value="0">Seleccione una opción</option>
         <option value="1">Chile  </option>   <!-- Seria mejor objetener del nombre del archivo  -->
         <option value="2">Espana </option>
@@ -23,7 +23,7 @@
     </select>
     
     <label for="">Elige un pais:</label>
-    <select name=selectMC id="MC2" onChange="main()"> 
+    <select name=selectMC id="MC2" onChange="cargaJson('MC2')"> 
         <option value="0">Seleccione una opción</option>
         <option value="1">Chile  </option>   <!-- Seria mejor objetener del nombre del archivo  -->
         <option value="2">Espana </option>
@@ -41,32 +41,32 @@
             <!-- Fila -->
             <th>
                 <!-- columna -->
-                <p><input type=button id="1" value="               "></th>
+                <p><input type=button id="1" onclick="updateName()" value="               "></th>
             <td>
-                <p><input type=button id="2" value="               ">
+                <p><input type=button id="2" onclick="updateName()" value="               ">
             </td>
             <th>
-                <p><input type=button id="3" value="               "></th>
+                <p><input type=button id="3" onclick="updateName()" value="               "></th>
             <td>
-                <p><input type=button id="4" value="               "></td>
+                <p><input type=button id="4" onclick="updateName()" value="               "></td>
             <th>
-                <p><input type=button id="5" value="               "></th>
+                <p><input type=button id="5" onclick="updateName()" value="               "></th>
             <td>
-                <p><input type=button id="6" value="               "></td>
+                <p><input type=button id="6" onclick="updateName()" value="               "></td>
         </tr>
         <tr>
             <th>
-                <p><input type=button id="7" value="               "></th>
+                <p><input type=button id="7" onclick="updateName()" value="               "></th>
             <th>
-                <p><input type=button id="8" value="               "></th>
+                <p><input type=button id="8" onclick="updateName()" value="               "></th>
             <th>
-                <p><input type=button id="9" value="               "></th>
+                <p><input type=button id="9" onclick="updateName()" value="               "></th>
             <th>
-                <p><input type=button id="10" value="               "></th>
+                <p><input type=button id="10" onclick="updateName()" value="               "></th>
             <th>
-                <p><input type=button id="11" value="               "></th>
+                <p><input type=button id="11" onclick="updateName()" value="               "></th>
             <th>
-                <p><input type=button id="12" value="               "></th>
+                <p><input type=button id="12" onclick="updateName()" value="               "></th>
         </tr>
     </table>
 
@@ -81,32 +81,32 @@
             <!-- Fila -->
             <th>
                 <!-- columna -->
-                <p><input type=submit value="1"></th>
+                <p><input type=button id="13" onclick="updateName()" value="               "></th>
             <td>
-                <p><input type=submit value="Validate">
+                <p><input type=button id="14" onclick="updateName()" value="               ">
             </td>
             <th>
-                <p><input type=submit value="Validate"></th>
+                <p><input type=button id="15" onclick="updateName()" value="               "></th>
             <td>
-                <p><input type=submit value="Validate"></td>
+                <p><input type=button id="16" onclick="updateName()" value="               "></td>
             <th>
-                <p><input type=submit value="Validate"></th>
+                <p><input type=button id="17" onclick="updateName()" value="               "></th>
             <td>
-                <p><input type=submit value="Validate"></td>
+                <p><input type=button id="18" onclick="updateName()" value="               "></td>
         </tr>
         <tr>
             <th>
-                <p><input type=submit value="Validate"></th>
+                <p><input type=button id="19" onclick="updateName()" value="               "></th>
             <th>
-                <p><input type=submit value="Validate"></th>
+                <p><input type=button id="20" onclick="updateName()" value="               "></th>
             <th>
-                <p><input type=submit value="Validate"></th>
+                <p><input type=button id="21" onclick="updateName()" value="               "></th>
             <th>
-                <p><input type=submit value="Validate"></th>
+                <p><input type=button id="22" onclick="updateName()" value="               "></th>
             <th>
-                <p><input type=submit value="Validate"></th>
+                <p><input type=button id="23" onclick="updateName()" value="               "></th>
             <th>
-                <p><input type=submit value="Validate"></th>
+                <p><input type=button id="24" onclick="updateName()" value="               "></th>
         </tr>
     </table>
 
