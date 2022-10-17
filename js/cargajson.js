@@ -1,5 +1,5 @@
-function main(){
-    var value = document.getElementById("MC1").value;
+function cargaJson(id){
+    var value = document.getElementById(id).value;
 
     switch (value) {
         case "1":
@@ -23,67 +23,77 @@ function main(){
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
             var myObJson = JSON.parse(this.responseText);
-            updateContent(value, myObJson);
+            updateContent(id, value, myObJson);
         }
     };
     xhttp.open("GET", jsonFile, true);
     xhttp.send();
 }
 
-function updateContent(valor, objJson){
+function updateContent(pId, valor, objJson){
     switch (valor) {
         case "1":
-            chile(objJson);
+            chile(pId, objJson);
             break;
         case "2":
-            espana(objJson);
+            espana(pId, objJson);
             break;
         case "3":
-            argentina(objJson);
+            argentina(pId, objJson);
             break;
         case "4":
-            mexico(objJson);
+            mexico(pId, objJson);
             break;
         default:
-            limpiarBtn();
+            limpiarBtn(pId);
             break;
     }
 }
 
-function chile(objJson){
-    var id = 1;
+function chile(pid, objJson){
+    pid == "MC1" ? id = 1 : id = 13;
     for (i in objJson.participantes){
         document.getElementById(id.toString()).value = objJson.participantes[i];
         id++;
     }
 }
 
-function espana(objJson){
-    var id = 1;
+function espana(pid, objJson){
+    pid == "MC1" ? id = 1 : id = 13;
     for (i in objJson){
         document.getElementById(id.toString()).value = objJson[i];
         id++;
     }
 }
 
-function argentina(objJson){
-    var id = 1;
+function argentina(pid, objJson){
+    pid == "MC1" ? id = 1 : id = 13;
     for (i in objJson.participantes){
         document.getElementById(id.toString()).value = objJson.participantes[i];
         id++;
     }
 }
 
-function mexico(objJson){
-    var id = 1;
+function mexico(pid, objJson){
+    pid == "MC1" ? id = 1 : id = 13;
+    var i2 = 1;
     for (i in objJson.participantes){
-        document.getElementById(id.toString()).value = objJson.participantes[i][id];
+        document.getElementById(id.toString()).value = objJson.participantes[i][i2];
+        i2++;
         id++;
     }
 }
 
-function limpiarBtn(){
-    for (id = 1; id <= 12; id++){
+function limpiarBtn(pid){
+    if (pid == "MC1"){
+        id = 1;
+        limit = 12;
+    }
+    else {
+        id = 13;
+        limit = 24;
+    }
+    for (id; id <= limit; id++){
         document.getElementById(id.toString()).value = "               ";
     }
 }
