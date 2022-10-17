@@ -28,3 +28,11 @@
 * {
     font-family: "Mystery Quest", cursive;
 }
+.header{
+    box-sizing: border-box;
+    background-image: url(../img/fmsbanner.jpg);
+    height: 30rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
