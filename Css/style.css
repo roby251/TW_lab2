@@ -28,3 +28,7 @@
 * {
     font-family: "Mystery Quest", cursive;
 }
+#ganadorR2,#ganadorR1,#ganadorF{
+    padding-left: 10px;
+    padding-right: 10px;
+}
