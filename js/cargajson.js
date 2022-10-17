@@ -45,7 +45,7 @@ function updateContent(valor, objJson){
             mexico(objJson);
             break;
         default:
-            console.log("Nada");
+            limpiarBtn();
             break;
     }
 }
@@ -61,7 +61,7 @@ function chile(objJson){
 function espana(objJson){
     var id = 1;
     for (i in objJson){
-        document.getElementById(id.toString()).value = objJson;
+        document.getElementById(id.toString()).value = objJson[i];
         id++;
     }
 }
@@ -69,7 +69,7 @@ function espana(objJson){
 function argentina(objJson){
     var id = 1;
     for (i in objJson.participantes){
-        document.getElementById(id.toString()).value = objJson.participantes.i;
+        document.getElementById(id.toString()).value = objJson.participantes[i];
         id++;
     }
 }
@@ -77,7 +77,13 @@ function argentina(objJson){
 function mexico(objJson){
     var id = 1;
     for (i in objJson.participantes){
-        document.getElementById(id.toString()).value = objJson.participantes[i].i;
+        document.getElementById(id.toString()).value = objJson.participantes[i][id];
         id++;
+    }
+}
+
+function limpiarBtn(){
+    for (id = 1; id <= 12; id++){
+        document.getElementById(id.toString()).value = "               ";
     }
 }
