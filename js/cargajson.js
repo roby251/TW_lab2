@@ -45,7 +45,7 @@ function updateContent(valor, objJson){
             mexico(objJson);
             break;
         default:
-            console.log("Nada");
+            limpiarBtn();
             break;
     }
 }
@@ -79,5 +79,11 @@ function mexico(objJson){
     for (i in objJson.participantes){
         document.getElementById(id.toString()).value = objJson.participantes[i][i];
         id++;
+    }
+}
+
+function limpiarBtn(){
+    for (id = 1; id <= 12; id++){
+        document.getElementById(id.toString()).value = "               ";
     }
 }
