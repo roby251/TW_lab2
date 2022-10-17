@@ -1,5 +1,5 @@
-function cargaJson(id){
-    var value = document.getElementById(id).value;
+function main(){
+    var value = document.getElementById("MC1").value;
 
     switch (value) {
         case "1":
@@ -23,83 +23,67 @@ function cargaJson(id){
     xhttp.onreadystatechange = function(){
         if (this.readyState == 4 && this.status == 200) {
             var myObJson = JSON.parse(this.responseText);
-            updateContent(id, value, myObJson);
+            updateContent(value, myObJson);
         }
     };
     xhttp.open("GET", jsonFile, true);
     xhttp.send();
 }
 
-function updateContent(pId, valor, objJson){
+function updateContent(valor, objJson){
     switch (valor) {
         case "1":
-            chile(pId, objJson);
+            chile(objJson);
             break;
         case "2":
-            espana(pId, objJson);
+            espana(objJson);
             break;
         case "3":
-            argentina(pId, objJson);
+            argentina(objJson);
             break;
         case "4":
-            mexico(pId, objJson);
+            mexico(objJson);
             break;
         default:
-            limpiarBtn(pId);
+            limpiarBtn();
             break;
     }
 }
 
-function chile(pid, objJson){
-    pid == "MC1" ? id = 1 : id = 13;
+function chile(objJson){
+    var id = 1;
     for (i in objJson.participantes){
         document.getElementById(id.toString()).value = objJson.participantes[i];
         id++;
     }
 }
 
-function espana(pid, objJson){
-    pid == "MC1" ? id = 1 : id = 13;
+function espana(objJson){
+    var id = 1;
     for (i in objJson){
         document.getElementById(id.toString()).value = objJson[i];
         id++;
     }
 }
 
-function argentina(pid, objJson){
-    pid == "MC1" ? id = 1 : id = 13;
+function argentina(objJson){
+    var id = 1;
     for (i in objJson.participantes){
         document.getElementById(id.toString()).value = objJson.participantes[i];
         id++;
     }
 }
 
-function mexico(pid, objJson){
-    pid == "MC1" ? id = 1 : id = 13;
-    var i2 = 1;
+function mexico(objJson){
+    var id = 1;
     for (i in objJson.participantes){
-        document.getElementById(id.toString()).value = objJson.participantes[i][i2];
-        i2++;
+        document.getElementById(id.toString()).value = objJson.participantes[i][id];
         id++;
     }
 }
 
-function limpiarBtn(pid){
-    if (pid == "MC1"){
-        id = 1;
-        limit = 12;
-    }
-    else {
-        id = 13;
-        limit = 24;
-    }
-    for (id; id <= limit; id++){
+function limpiarBtn(){
+    for (id = 1; id <= 12; id++){
         document.getElementById(id.toString()).value = "               ";
     }
-}
-
-//Función Para actualizar nombre de participante
-
-function updateName(){
-
 }
