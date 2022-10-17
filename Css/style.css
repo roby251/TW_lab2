@@ -46,6 +46,6 @@ body{
     background-repeat: no-repeat;
     background-position: center center;
 }
-th,tr{
+th,tr,p{
     background-color: white;
 }
