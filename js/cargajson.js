@@ -77,7 +77,7 @@ function argentina(objJson){
 function mexico(objJson){
     var id = 1;
     for (i in objJson.participantes){
-        document.getElementById(id.toString()).value = objJson.participantes[i][i];
+        document.getElementById(id.toString()).value = objJson.participantes[i][id];
         id++;
     }
 }
