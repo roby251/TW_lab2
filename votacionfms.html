@@ -9,10 +9,22 @@
     <script type="text/javascript" src="js/cargajson.js"></script>
     <script type="text/javascript" src="js/Calculadora.js"></script>
     <link rel="stylesheet" href="Css/style.css">
+    <script type="text/javascript">
+        //Función Para actualizar nombre de participante
+        function updateName(mcNumber, id){
+            if (mcNumber == "MC1"){
+                document.getElementById("R1P1").innerHTML = document.getElementById(id).value;
+                document.getElementById("R2P1").innerHTML = document.getElementById(id).value;
+            }
+            else{
+                document.getElementById("R1P2").innerHTML = document.getElementById(id).value;
+                document.getElementById("R2P2").innerHTML = document.getElementById(id).value;
+            }
+        }
+    </script>
 </head>
 
 <body>
-    <div id="caca"></div>
     <label for="">Elige un pais:</label>
     <select name=selectMC id="MC1" onchange="cargaJson('MC1')"> 
         <option value="0">Seleccione una opción</option>
@@ -41,32 +53,32 @@
             <!-- Fila -->
             <th>
                 <!-- columna -->
-                <p><input type=button id="1" onclick="updateName()" value="               "></th>
+                <p><input type=button id="1" onclick="updateName('MC1', id)" value="               "></th>
             <td>
-                <p><input type=button id="2" onclick="updateName()" value="               ">
+                <p><input type=button id="2" onclick="updateName('MC1', id)" value="               ">
             </td>
             <th>
-                <p><input type=button id="3" onclick="updateName()" value="               "></th>
+                <p><input type=button id="3" onclick="updateName('MC1', id)" value="               "></th>
             <td>
-                <p><input type=button id="4" onclick="updateName()" value="               "></td>
+                <p><input type=button id="4" onclick="updateName('MC1', id)" value="               "></td>
             <th>
-                <p><input type=button id="5" onclick="updateName()" value="               "></th>
+                <p><input type=button id="5" onclick="updateName('MC1', id)" value="               "></th>
             <td>
-                <p><input type=button id="6" onclick="updateName()" value="               "></td>
+                <p><input type=button id="6" onclick="updateName('MC1', id)" value="               "></td>
         </tr>
         <tr>
             <th>
-                <p><input type=button id="7" onclick="updateName()" value="               "></th>
+                <p><input type=button id="7" onclick="updateName('MC1', id)" value="               "></th>
             <th>
-                <p><input type=button id="8" onclick="updateName()" value="               "></th>
+                <p><input type=button id="8" onclick="updateName('MC1', id)" value="               "></th>
             <th>
-                <p><input type=button id="9" onclick="updateName()" value="               "></th>
+                <p><input type=button id="9" onclick="updateName('MC1', id)" value="               "></th>
             <th>
-                <p><input type=button id="10" onclick="updateName()" value="               "></th>
+                <p><input type=button id="10" onclick="updateName('MC1', id)" value="               "></th>
             <th>
-                <p><input type=button id="11" onclick="updateName()" value="               "></th>
+                <p><input type=button id="11" onclick="updateName('MC1', id)" value="               "></th>
             <th>
-                <p><input type=button id="12" onclick="updateName()" value="               "></th>
+                <p><input type=button id="12" onclick="updateName('MC1', id)" value="               "></th>
         </tr>
     </table>
 
@@ -81,32 +93,32 @@
             <!-- Fila -->
             <th>
                 <!-- columna -->
-                <p><input type=button id="13" onclick="updateName()" value="               "></th>
+                <p><input type=button id="13" onclick="updateName('MC2', id)" value="               "></th>
             <td>
-                <p><input type=button id="14" onclick="updateName()" value="               ">
+                <p><input type=button id="14" onclick="updateName('MC2', id)" value="               ">
             </td>
             <th>
-                <p><input type=button id="15" onclick="updateName()" value="               "></th>
+                <p><input type=button id="15" onclick="updateName('MC2', id)" value="               "></th>
             <td>
-                <p><input type=button id="16" onclick="updateName()" value="               "></td>
+                <p><input type=button id="16" onclick="updateName('MC2', id)" value="               "></td>
             <th>
-                <p><input type=button id="17" onclick="updateName()" value="               "></th>
+                <p><input type=button id="17" onclick="updateName('MC2', id)" value="               "></th>
             <td>
-                <p><input type=button id="18" onclick="updateName()" value="               "></td>
+                <p><input type=button id="18" onclick="updateName('MC2', id)" value="               "></td>
         </tr>
         <tr>
             <th>
-                <p><input type=button id="19" onclick="updateName()" value="               "></th>
+                <p><input type=button id="19" onclick="updateName('MC2', id)" value="               "></th>
             <th>
-                <p><input type=button id="20" onclick="updateName()" value="               "></th>
+                <p><input type=button id="20" onclick="updateName('MC2', id)" value="               "></th>
             <th>
-                <p><input type=button id="21" onclick="updateName()" value="               "></th>
+                <p><input type=button id="21" onclick="updateName('MC2', id)" value="               "></th>
             <th>
-                <p><input type=button id="22" onclick="updateName()" value="               "></th>
+                <p><input type=button id="22" onclick="updateName('MC2', id)" value="               "></th>
             <th>
-                <p><input type=button id="23" onclick="updateName()" value="               "></th>
+                <p><input type=button id="23" onclick="updateName('MC2', id)" value="               "></th>
             <th>
-                <p><input type=button id="24" onclick="updateName()" value="               "></th>
+                <p><input type=button id="24" onclick="updateName('MC2', id)" value="               "></th>
         </tr>
     </table>
 

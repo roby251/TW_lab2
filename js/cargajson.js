@@ -97,9 +97,3 @@ function limpiarBtn(pid){
         document.getElementById(id.toString()).value = "               ";
     }
 }
-
-//Función Para actualizar nombre de participante
-
-function updateName(){
-
-}
